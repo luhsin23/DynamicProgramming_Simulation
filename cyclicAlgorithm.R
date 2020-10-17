@@ -1,5 +1,4 @@
 #Data Input
-setwd("~/Desktop/108-2/Dynamic Programming/HW")
 dta = read.delim2("dp02.txt",sep="",header = FALSE)
 # new example with 10 nodes
 # dta = read.delim2("dp02_n.txt",sep="",header = FALSE)
@@ -7,7 +6,6 @@ dta0 = dta
 dta0[,1] = dta[,2]
 dta0[,2] = dta[,1]
 dta_new = rbind(dta, dta0)
-
 
 #create the t matrix, which is symmetric because the route is cyclic
 #there are 10 nodes: N=10
@@ -17,9 +15,8 @@ for(j in 1:nrow(dta_new)){
   t[dta_new[j,1],dta_new[j,2]] = dta_new[j,3]
 }
 
-
 #Step 1
-# 設定起始與結束的點
+# Setting the starting point and the end point
 s = 1
 e = 10
 
@@ -64,8 +61,5 @@ for(i in 1:(N)-1){
 
 
 #output
-cat("從",s,"到",e,"的最短距離為",V[e])
-cat("所經路徑為",K[[e]])
-
-
-
+cat("From ",s," to",e,"'s shortest path is: ",V[e])
+cat("and the path length is: ",K[[e]])
