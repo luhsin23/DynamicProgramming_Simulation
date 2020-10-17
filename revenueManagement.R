@@ -1,4 +1,3 @@
-#HW6 EX1
 # Input values are changable here!
 actualDemand = c(1,2,3,4,5,6,7,8,9,10)
 orderingCostPerUnit = 10
