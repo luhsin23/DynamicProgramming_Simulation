@@ -1,4 +1,3 @@
-setwd("~/Desktop/108-2/Dynamic Programming/HW")
 dta = read.delim2("dp01.txt",sep="",header = FALSE)
 N = dta[1,1]
 f=c(rep(Inf,N))
@@ -22,9 +21,6 @@ for(i in (N-1):1){
   }
 }
 
-
-
-
 path = c(1)
 j0 = 0
 for(i in 1:7){
@@ -42,4 +38,4 @@ for(i in 1:7){
 #path
 
 p = paste(path, collapse = ",")
-cat("從1到",N,"的最短路徑為",f[1],",最短路徑為",p)
+cat("From 1 to",N,"'s shorthest path length is:",f[1],",and the path is:",p)
